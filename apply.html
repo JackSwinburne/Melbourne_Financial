@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melbourne Finance</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .required{
+            color: red;
+            font-size: 1em;
+        }
+
+    </style>
+
 </head>
 <body>
 
@@ -19,7 +27,103 @@
             </ul>
         </nav>
     </header>
+
     <main>
+        <h1>Job Application Form</h1>
+        <p style ="margin-bottom: 20px;">Please complete all fields below to apply for a role at Melbourne Finance</p>
+        <p class required>Fields marked with * are mandatory</p>
+
+        <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+            <div class="form-row">
+                <label for="job">Job Reference Number</label>
+                <input type="text" id="job" name ="job" maxlength=6 required>
+            </div>
+
+                <div class="form-row">
+                <label for="fname">First Name *</label>
+                <input type="text" id="fname" name ="fname" maxlength=20 required> 
+            </div>    
+
+                <div class="form-row">
+                <label for="lname">Last Name *</label>
+                <input type="text" id="lname" name ="lname" maxlength=20 required>
+            </div>
+
+                <div class="form-row">
+                <label for="dob">Date of Birth *</label>
+                <input type="date" id="dob" name="dob" title="Format: dd/mm/yyyy" required> >
+            </div>
+            
+            <fieldset>
+                <legend>Gender</legend>
+                <label><input type="radio" name="gender" value="female" required> Female</label>
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="nonbinary" required> Non-binary</label>
+                <label><input type="radio" name="gender" value="undisclosed" required> Prefer not to say</label>
+            </fieldset>
+                
+            <div class="form-row">
+                <label for="address">Street Address *</label>
+                <input type="text" id="address" name ="address" maxlength=50>
+            </div>
+
+                <div class="form-row">
+                <label for="suburb">Suburb</label>
+                <input type="text" id="suburb" name ="suburb" maxlength=20>
+            </div>
+
+                <div class="form-row">
+                <label for="state">State *</label>
+                    <select id="state" name="state" required>
+                    <option value="">-- Select a state --</option>
+                    <option value="VIC">VIC</option>
+                    <option value="NSW">NSW</option>
+                    <option value="QLD">QLD</option>
+                    <option value="NT">NT</option>
+                    <option value="WA">WA</option>
+                    <option value="SA">SA</option>
+                    <option value="TAS">TAS</option>
+                    <option value="ACT">ACT</option>
+                </select>
+            </div>   
+
+
+                <div class="form-row">
+                <label for="post">Postcode</label>
+                <input type="text" id="post" name ="post" maxlength=4>
+            </div>
+
+                <div class="form-row">
+                <label for="email">Email</label>
+                <input type="text" id="email" name ="email" maxlength=20>
+            </div>
+                <div class="form-row">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name ="phone" maxlength=20>
+            </div>
+
+            <fieldset class="form-row">
+                <legend>Skills</legend>
+                <label><input type="checkbox" name="skills" value="html/css"> HTML/CSS</label>
+                <label><input type="checkbox" name="skills" value="cs"> Customer Service</label>
+                <label><input type="checkbox" name="skills" value="fa"> Financial Analysis</label>
+                <label><input type="checkbox" name="skills" value="com"> Communication</label>
+                <label><input type="checkbox" name="skills" value="exl"> Excel</label>
+            </fieldset>
+
+                <div class="form-row">
+                <label for="lname">Additional Skills/Comments</label>
+                <input type="text" id="lname" name ="lname" maxlength=20>
+            </div>
+
+                <div class="form-row">
+                    <button type="submit">Submit Application</button>
+            </div>
+
+
+
+        </form> 
+        
 
     </main>
 
