@@ -30,13 +30,13 @@
 
     <main>
         <h1>Job Application Form</h1>
-        <p style ="margin-bottom: 20px;">Please complete all fields below to apply for a role at Melbourne Finance</p>
-        <p class required>Fields marked with * are mandatory</p>
+        <p style="margin-bottom: 20px;">Please complete all fields below to apply for a role at Melbourne Finance</p>
+        <p class="required">Fields marked with * are mandatory</p>
 
         <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
             <div class="form-row">
-                <label for="job">Job Reference Number</label>
-                <input type="text" id="job" name ="job" maxlength=6 required>
+                <label for="job">Job Reference Number *</label>
+                <input type="text" id="job" name ="job" maxlength=6 minlength=6 required>
             </div>
 
                 <div class="form-row">
@@ -51,7 +51,7 @@
 
                 <div class="form-row">
                 <label for="dob">Date of Birth *</label>
-                <input type="date" id="dob" name="dob" title="Format: dd/mm/yyyy" required> >
+                <input type="date" id="dob" name="dob" title="Format: dd/mm/yyyy" required>
             </div>
             
             <fieldset>
@@ -64,12 +64,12 @@
                 
             <div class="form-row">
                 <label for="address">Street Address *</label>
-                <input type="text" id="address" name ="address" maxlength=50>
+                <input type="text" id="address" name ="address" maxlength=40 required>
             </div>
 
                 <div class="form-row">
-                <label for="suburb">Suburb</label>
-                <input type="text" id="suburb" name ="suburb" maxlength=20>
+                <label for="suburb">Suburb *</label>
+                <input type="text" id="suburb" name ="suburb" maxlength=40 required>
             </div>
 
                 <div class="form-row">
@@ -89,32 +89,35 @@
 
 
                 <div class="form-row">
-                <label for="post">Postcode</label>
-                <input type="text" id="post" name ="post" maxlength=4>
+                <label for="post">Postcode *</label>
+                <input type="text" id="post" name ="post" maxlength=4 minlength=4 required>
             </div>
 
                 <div class="form-row">
-                <label for="email">Email</label>
-                <input type="text" id="email" name ="email" maxlength=20>
+                <label for="email">Email *</label>
+                <input type="email" id="email" name ="email" required>
             </div>
                 <div class="form-row">
-                <label for="phone">Phone Number</label>
-                <input type="text" id="phone" name ="phone" maxlength=20>
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" pattern="\d{8,12}" title="Between 8 and 12 digits, no spaces or letters" maxlength="12" required>
             </div>
 
             <fieldset class="form-row">
                 <legend>Skills</legend>
                 <label><input type="checkbox" name="skills" value="html/css"> HTML/CSS</label>
                 <label><input type="checkbox" name="skills" value="cs"> Customer Service</label>
-                <label><input type="checkbox" name="skills" value="fa"> Financial Analysis</label>
+                <label><input type="checkbox" name="skills" value="fa"> Python/SQL</label>
                 <label><input type="checkbox" name="skills" value="com"> Communication</label>
                 <label><input type="checkbox" name="skills" value="exl"> Excel</label>
             </fieldset>
 
                 <div class="form-row">
-                <label for="lname">Additional Skills/Comments</label>
-                <input type="text" id="lname" name ="lname" maxlength=20>
+                <label for="extraskills">Additional Skills</label>
+                <textarea id="extraskills" name="extraskill" rows="4" maxlength="200">
+                </textarea>
+
             </div>
+
 
                 <div class="form-row">
                     <button type="submit">Submit Application</button>
