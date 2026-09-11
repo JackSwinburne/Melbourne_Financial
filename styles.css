@@ -179,9 +179,11 @@ th, td {
 }
 
 th {
-    background-color: #eaf3fb;
+    background-color: #eaf3fb; 
 }
 .jobs-layout {
-    display: block;
-    clear: both;;
+    display: flex;
+    clear: both;
+    gap: 2rem;
+    align-items: flex-start;
 }
