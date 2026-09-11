@@ -181,4 +181,7 @@ th, td {
 th {
     background-color: #eaf3fb;
 }
-
+.jobs-layout {
+    display: block;
+    clear: both;;
+}
